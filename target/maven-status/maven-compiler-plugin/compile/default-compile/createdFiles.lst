@@ -1,0 +1,8 @@
+testMaven/PageObjects/CheckOutPage.class
+testMaven/PageObjects/ConfirmationPage.class
+testMaven/PageObjects/ProductCatalogue.class
+testMaven/AbstractComponents/AbstractComponent.class
+testMaven/PageObjects/OrderPage.class
+testMaven/PageObjects/CartPage.class
+testMaven/PageObjects/LandingPage.class
+testMaven/resources/ExtentReportNG.class

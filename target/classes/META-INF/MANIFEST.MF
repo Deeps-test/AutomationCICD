@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 17
+Class-Path: libs/cucumber-java-7.18.0.jar libs/cucumber-core-7.18.0.jar 
+ libs/cucumber-gherkin-7.18.0.jar libs/cucumber-gherkin-messages-7.18.0.
+ jar libs/gherkin-28.0.0.jar libs/messages-24.1.0.jar libs/testng-xml-fo
+ rmatter-0.1.0.jar libs/query-12.1.2.jar libs/tag-expressions-6.1.0.jar 
+ libs/cucumber-expressions-17.1.0.jar libs/datatable-7.18.0.jar libs/cuc
+ umber-plugin-7.18.0.jar libs/docstring-7.18.0.jar libs/html-formatter-2
+ 1.3.1.jar libs/junit-xml-formatter-0.4.0.jar libs/ci-environment-10.0.1
+ .jar libs/apiguardian-api-1.1.2.jar libs/cucumber-testng-7.18.0.jar lib
+ s/slf4j-simple-1.7.32.jar libs/slf4j-api-1.7.32.jar libs/webdrivermanag
+ er-5.8.0.jar libs/gson-2.10.1.jar libs/docker-java-3.3.6.jar libs/docke
+ r-java-core-3.3.6.jar libs/docker-java-api-3.3.6.jar libs/bcpkix-jdk18o
+ n-1.76.jar libs/bcprov-jdk18on-1.76.jar libs/bcutil-jdk18on-1.76.jar li
+ bs/jcl-over-slf4j-1.7.30.jar libs/docker-java-transport-httpclient5-3.3
+ .6.jar libs/docker-java-transport-3.3.6.jar libs/jna-5.13.0.jar libs/de
+ c-0.1.2.jar libs/commons-lang3-3.14.0.jar libs/commons-compress-1.26.1.
+ jar libs/commons-codec-1.16.1.jar libs/commons-io-2.15.1.jar libs/httpc
+ lient5-5.2.1.jar libs/httpcore5-5.2.jar libs/httpcore5-h2-5.2.jar libs/
+ extentreports-5.1.1.jar libs/rxjava-3.1.6.jar libs/reactive-streams-1.0
+ .4.jar libs/freemarker-2.3.32.jar libs/lombok-1.18.26.jar libs/guava-31
+ .0.1-jre.jar libs/failureaccess-1.0.1.jar libs/listenablefuture-9999.0-
+ empty-to-avoid-conflict-with-guava.jar libs/jsr305-3.0.2.jar libs/check
+ er-qual-3.12.0.jar libs/error_prone_annotations-2.7.1.jar libs/j2objc-a
+ nnotations-1.3.jar libs/selenium-java-4.21.0.jar libs/selenium-api-4.21
+ .0.jar libs/selenium-chrome-driver-4.21.0.jar libs/auto-service-annotat
+ ions-1.1.1.jar libs/selenium-chromium-driver-4.21.0.jar libs/selenium-j
+ son-4.21.0.jar libs/selenium-manager-4.21.0.jar libs/selenium-devtools-
+ v123-4.21.0.jar libs/selenium-devtools-v124-4.21.0.jar libs/selenium-de
+ vtools-v125-4.21.0.jar libs/selenium-devtools-v85-4.21.0.jar libs/selen
+ ium-edge-driver-4.21.0.jar libs/selenium-firefox-driver-4.21.0.jar libs
+ /selenium-http-4.21.0.jar libs/failsafe-3.3.2.jar libs/selenium-ie-driv
+ er-4.21.0.jar libs/selenium-remote-driver-4.21.0.jar libs/opentelemetry
+ -semconv-1.25.0-alpha.jar libs/opentelemetry-api-1.38.0.jar libs/opente
+ lemetry-context-1.38.0.jar libs/opentelemetry-exporter-logging-1.38.0.j
+ ar libs/opentelemetry-sdk-common-1.38.0.jar libs/opentelemetry-sdk-exte
+ nsion-autoconfigure-spi-1.38.0.jar libs/opentelemetry-sdk-extension-aut
+ oconfigure-1.38.0.jar libs/opentelemetry-api-incubator-1.38.0-alpha.jar
+  libs/opentelemetry-sdk-trace-1.38.0.jar libs/opentelemetry-sdk-1.38.0.
+ jar libs/opentelemetry-sdk-metrics-1.38.0.jar libs/opentelemetry-sdk-lo
+ gs-1.38.0.jar libs/byte-buddy-1.14.15.jar libs/selenium-os-4.21.0.jar l
+ ibs/commons-exec-1.4.0.jar libs/selenium-safari-driver-4.21.0.jar libs/
+ selenium-support-4.21.0.jar libs/testng-7.6.1.jar libs/jcommander-1.82.
+ jar libs/jquery-3.6.0.jar libs/jackson-databind-2.17.1.jar libs/jackson
+ -annotations-2.17.1.jar libs/jackson-core-2.17.1.jar
+Main-Class: com.example.Main
+Created-By: Maven Integration for Eclipse
+

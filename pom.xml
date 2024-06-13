@@ -1,0 +1,196 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>MavenProject</groupId>
+  <artifactId>MavenTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+    <name>MyApp</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <!-- Setting the Java version here to ensure compatibility -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    
+   <dependencies>
+	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>7.18.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.18.0</version>
+</dependency>
+
+<!-- <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency> -->
+	<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>1.7.32</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.8.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.1</version>
+</dependency>
+<dependency>
+	
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>31.0.1-jre</version> <!-- Adjust this version as necessary -->
+    </dependency>
+	<dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.21.0</version> <!-- Check for the latest version -->
+    </dependency>
+    
+    <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.6.1</version>
+   
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.17.1</version>
+</dependency>
+  </dependencies>
+  <profiles>
+	<profile>
+		<id>Regression</id>
+		<build>
+        <pluginManagement>
+            <plugins>
+		      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+            </plugins>
+        </pluginManagement>
+		</build>
+	</profile>
+	
+	<profile>
+		<id>purchase</id>
+		<build>
+        <pluginManagement>
+            <plugins>
+		      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/purchase.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+            </plugins>
+        </pluginManagement>
+		</build>
+	</profile>
+	<profile>
+		<id>ErrorValidation</id>
+		<build>
+        <pluginManagement>
+            <plugins>
+		      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/ErrorValidation.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+            </plugins>
+        </pluginManagement>
+		</build>
+	</profile>
+  </profiles>
+  <build>
+	<pluginManagement>
+  <plugins>
+	
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+                <!-- Maven Compiler Plugin to compile Java files -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                    </configuration>
+                </plugin>
+
+                <!-- Maven JAR Plugin to package compiled files into a JAR -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addClasspath>true</addClasspath>
+                                <classpathPrefix>libs/</classpathPrefix>
+                                <mainClass>com.example.Main</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+
+                <!-- Maven Surefire Plugin for running tests -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                    <configuration>
+                        <!-- Configurations for the test executions can be specified here -->
+                    </configuration>
+                </plugin>
+          
+            </plugins>
+        </pluginManagement>
+    </build>
+  
+</project>
